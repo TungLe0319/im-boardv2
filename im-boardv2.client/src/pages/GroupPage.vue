@@ -64,7 +64,7 @@ import { groupChatsService } from '../services/GroupChatsService.js';
 import Chat from '../components/GroupPage/Chat.vue';
 import { gameNightsService } from '../services/GameNightsService.js';
 import GameNightForm from '../components/GroupPage/GameNightForm.vue';
-import { GroupHandler } from "../handlers/GroupHandler.js";
+
 
 
 export default {
@@ -125,13 +125,13 @@ export default {
       getGroupChatsByGroupId();
       getGroupGameNights();
       scrollToBottom();
-      GroupHandler.EnterGroup(route.params.id);
+
     });
 
 
     onBeforeRouteLeave(() => {
 
-      GroupHandler.LeaveGroup(route.params.id);
+    
     });
     // ANCHOR this essentially works as an observer.. think 'AppState.on'
     // watchEffect(() => {
@@ -177,7 +177,7 @@ export default {
   columns: 2;
 }
 
-// 
+//
 
 .groupchatbox {
   height: 80vh;
