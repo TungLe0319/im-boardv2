@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
   :class=" new Date(gamenight?.startDate) <= Date.now()? 'test disabled' : ''"
   class="GameNightCard  card my-2 elevation-3 position-relative " :style="{ backgroundImage: getRandomBg() }">
     <div class="row justify-content-center">
@@ -88,7 +88,6 @@
 
 <script>
 import { computed } from "@vue/reactivity";
-import { prop } from "dom7";
 // import { next } from "dom7";
 import { AppState } from "../../AppState.js";
 import { GameNight } from "../../models/GroupsAndGameNight/GameNight.js";
